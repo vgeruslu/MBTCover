@@ -5,7 +5,7 @@ MBTCover is a tool for code-level and requirement-level test coverage measuremen
 To be posted soon...
 
 ## Development team 
-*[James Sloan](https://www.linkedin.com/in/james-sloan-3b39a2150/)
+* [James Sloan](https://www.linkedin.com/in/james-sloan-3b39a2150/)
 
 * [Dr. Vahid Garousi](https://www.vgarousi.com), Associate Professor of Software Engineering, Queen’s University Belfast, Northern Ireland, UK
 
