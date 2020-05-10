@@ -13,9 +13,9 @@ To be posted soon...
 * [Dr. Vahid Garousi](https://www.vgarousi.com), Associate Professor of Software Engineering, Queen’s University Belfast, Northern Ireland, UK
 
 ## Demo videos
-A general overview of the code-base and tool's feature:
+A general overview of the tool's features and code-base:
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=zT3zq-WhgAQ" target="_blank"><img src="http://img.youtube.com/vi/zT3zq-WhgAQ/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
-More videos, showing the tool's features and benefits, will be published soon.
+More videos, showing the tool's features and benefits, will be published in near future.
