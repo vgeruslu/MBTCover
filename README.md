@@ -5,7 +5,7 @@ MBTCover is a tool for code-level and requirement-level test coverage measuremen
 May 2020
 
 ## Usage manual and Design document:
-To be posted soon...
+The PDF file can be found [here](https://github.com/vgarousi/MBTCover/blob/master/docs/MBTCover-User%20guide%20and%20Design%20document-May%2010.pdf). 
 
 ## Development team 
 * [James Sloan](https://www.linkedin.com/in/james-sloan-3b39a2150/)
