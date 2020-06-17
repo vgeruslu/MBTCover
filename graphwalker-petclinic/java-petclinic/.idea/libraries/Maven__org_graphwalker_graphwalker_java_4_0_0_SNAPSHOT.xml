@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.graphwalker:graphwalker-java:4.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graphwalker/graphwalker-java/4.0.0-SNAPSHOT/graphwalker-java-4.0.0-20191001.201458-96.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graphwalker/graphwalker-java/4.0.0-SNAPSHOT/graphwalker-java-4.0.0-20191001.201458-96-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graphwalker/graphwalker-java/4.0.0-SNAPSHOT/graphwalker-java-4.0.0-20191001.201458-96-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

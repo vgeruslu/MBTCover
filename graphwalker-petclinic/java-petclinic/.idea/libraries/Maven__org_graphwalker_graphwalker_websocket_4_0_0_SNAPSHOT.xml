@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.graphwalker:graphwalker-websocket:4.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graphwalker/graphwalker-websocket/4.0.0-SNAPSHOT/graphwalker-websocket-4.0.0-20191001.201611-94.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graphwalker/graphwalker-websocket/4.0.0-SNAPSHOT/graphwalker-websocket-4.0.0-20191001.201611-94-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graphwalker/graphwalker-websocket/4.0.0-SNAPSHOT/graphwalker-websocket-4.0.0-20191001.201611-94-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
