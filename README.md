@@ -19,6 +19,8 @@ In this video, we demonstrate a live execution of the MBTCover tool, while the M
 <a href="https://youtu.be/S9dVMUIuxgw" target="_blank"><img src="http://img.youtube.com/vi/S9dVMUIuxgw/0.jpg" 
  width="240" height="180" border="10" /></a>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S9dVMUIuxgw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### May 2020: An overview of the features and code-base of the first version of the tool
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=zT3zq-WhgAQ" target="_blank"><img src="http://img.youtube.com/vi/zT3zq-WhgAQ/0.jpg" 
