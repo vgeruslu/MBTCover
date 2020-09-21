@@ -1,5 +1,7 @@
 # Introduction
-MBTCover is a tool for code-level and requirement-level test coverage measurement of model-based testing. The current implementation is for the [GraphWalker](http://graphwalker.github.io) open-source model-based testing tool.
+MBTCover is a tool for code-level and requirement-level test coverage measurement of model-based testing. 
+MBTCover measures 
+The current implementation of MBTCover is for the [GraphWalker](http://graphwalker.github.io) open-source model-based testing (MBT) tool.
 
 ## First release date: 
 May 2020
@@ -13,7 +15,9 @@ The PDF file can be found [here](https://github.com/vgarousi/MBTCover/blob/maste
 * [Dr. Vahid Garousi](https://www.vgarousi.com), Associate Professor of Software Engineering, Queen’s University Belfast, Northern Ireland, UK
 
 ## Demo videos
-A general overview of the tool's features and code-base:
+### A demo video of the second version of the tool, showing coverage values live (September 2020):
+
+### An overview of the features and code-base of the first version of the tool (May 2020):
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=zT3zq-WhgAQ" target="_blank"><img src="http://img.youtube.com/vi/zT3zq-WhgAQ/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
