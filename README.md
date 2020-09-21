@@ -10,9 +10,10 @@ May 2020
 The PDF file can be found [here](https://github.com/vgarousi/MBTCover/blob/master/docs/MBTCover-User%20guide%20and%20Design%20document-May%2010.pdf). 
 
 ## Development team 
-* [James Sloan](https://www.linkedin.com/in/james-sloan-3b39a2150/)
-
-* [Dr. Vahid Garousi](https://www.vgarousi.com), Associate Professor of Software Engineering, Queen’s University Belfast, Northern Ireland, UK
+* (Team lead): [Dr. Vahid Garousi](https://www.vgarousi.com), Professor of Software Engineering and Senior Consultant, UK
+* [Alper Buğra Keleş](https://www.linkedin.com/in/alperbugrakeles/), Project Lead, Testinium A.Ş., Turkey
+* [Yunus Balaman](https://www.linkedin.com/in/yunus-balaman-100235159/), Test Automation Engineer, Testinium A.Ş., Turkey
+* [James Sloan](https://www.linkedin.com/in/james-sloan-3b39a2150/), Software Engineer, Global Payments Integrated Corporation
 
 ## Demo videos
 ### A demo video of the second version of the tool, showing coverage values live (September 2020):
