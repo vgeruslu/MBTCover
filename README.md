@@ -32,7 +32,7 @@ More videos showing the tool's features and benefits, will be published in futur
 We have the user manual and design document of the first version of the tool (which was released back in May 2020). The PDF file can be found [here](https://github.com/vgarousi/MBTCover/blob/master/docs/MBTCover-User%20guide%20and%20Design%20document-May%2010.pdf). 
 
 ## Funding and acknowledgements
-This work was supported by the European ITEA3 program via the [TESTOMAT (The Next Level of Test Automation)](https://www.testomatproject.eu) project via grant number 16032, and also by the Scientific and Technological Research Council of Turkey [TÜBİTAK](https://www.tubitak.gov.tr) via grant number 9180076. 
+This work was supported by the European [ITEA3](https://itea3.org) program via the [TESTOMAT (The Next Level of Test Automation)](https://www.testomatproject.eu) project via grant number 16032, and also by the Scientific and Technological Research Council of Turkey ([TÜBİTAK](https://www.tubitak.gov.tr)) via grant number 9180076. 
 
 ## Interested in collaborating with us?
 If you are interested in collaborating with us and/or getting involved in this project, feel free to email us: vgarousi -at- gmail -.- com
