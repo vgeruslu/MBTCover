@@ -1,0 +1,188 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Line Chart</title>
+    <script src="/js/Chart.min.js"></script>
+    <script src="/js/utils.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/theme.css}"/>
+    <style>
+	canvas{
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container"> <button class="navbar-toggler navbar-toggler-right border-0 p-0" type="button" data-toggle="collapse" data-target="#navbar14">
+        <p class="navbar-brand mb-0 text-white">
+            <i class="fa d-inline fa-lg fa-stop-circle"></i> BRAND </p>
+    </button>
+        <div class="collapse navbar-collapse" id="navbar14">
+            <p class="navbar-nav mr-auto d-none d-md-block lead mb-0 text-white"> <i class="fa d-inline fa-lg fa-stop-circle"></i><b>&nbsp;<a href="/requirements">Requirements</a></b></p>
+            <p class="navbar-nav mr-auto d-none d-md-block lead mb-0 text-white"> <i class="fa d-inline fa-lg fa-stop-circle"></i><b>&nbsp;<a href="#">Client Coverage</a></b></p>
+            <p class="navbar-nav mr-auto d-none d-md-block lead mb-0 text-white"> <i class="fa d-inline fa-lg fa-stop-circle"></i><b>&nbsp;<a href="#">Server Coverage</a></b></p>
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="https://testinium.com/" target="_blank">
+                    <img src="/images/testinium-web.svg" alt>
+                </a>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="py-4 text-center" style="">
+    <div>
+        <div>
+            <div class="text-center">
+                <h2>GraphWalker Code Coverage</h2>
+                <br>
+<div class="py-1 row justify-content-center">
+<a id="deneme" class="btn btn-primary">Deneme</a>
+    <br>
+</div>
+<div style="margin-left:auto;margin-right:auto;text-align: center;width:90%;">
+    <canvas id="canvas"></canvas>
+</div>
+<br>
+<br>
+<button id="randomizeData">Randomize Data</button>
+<button id="addDataset">Add Dataset</button>
+<button id="removeDataset">Remove Dataset</button>
+<button id="addData">Add Data</button>
+<button id="removeData">Remove Data</button>
+<script>
+		var i = 0;
+		var config = {
+			type: 'line',
+			data: {
+			labels: [],
+			datasets: []
+			},
+			options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Client Coverage Line Chart'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+            scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						ticks: {
+                                //beginAtZero: true,
+                                min: 0,
+                                steps: 10,
+                                //stepValue: 5,
+                                max: 100
+                            },
+						scaleLabel: {
+							display: true,
+							labelString: 'Value'
+						}
+					}]
+				}
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myLine = new Chart(ctx, config);
+		};
+
+		document.getElementById('randomizeData').addEventListener('click', function() {
+			config.data.datasets.forEach(function(dataset) {
+				dataset.data = dataset.data.map(function() {
+					return randomScalingFactor();
+				});
+
+			});
+
+			window.myLine.update();
+		});
+
+		var colorNames = Object.keys(window.chartColors);
+		document.getElementById('addDataset').addEventListener('click', function() {
+			var colorName = colorNames[config.data.datasets.length % colorNames.length];
+			var newColor = window.chartColors[colorName];
+			var newDataset = {
+				label: 'Dataset ' + config.data.datasets.length,
+				backgroundColor: newColor,
+				borderColor: newColor,
+				data: [],
+				fill: false
+			};
+
+			for (var index = 0; index < config.data.labels.length; ++index) {
+			    if(index > 5){
+				newDataset.data.push(randomScalingFactor());}
+				else{
+				newDataset.data.push(null);
+				}
+			}
+
+			config.data.datasets.push(newDataset);
+			window.myLine.update();
+		});
+
+		document.getElementById('addData').addEventListener('click', function() {
+			if (config.data.datasets.length > 0) {
+
+				i = i+2;
+				config.data.labels.push(new Date(i*1000).toISOString().substr(11, 8)
+				/**.toLocaleTimeString('en-GB', { hour12: false,
+                                             hour: "numeric",
+                                             minute: "numeric",
+                                             second: "numeric"})*/
+                                             );
+
+				config.data.datasets.forEach(function(dataset) {
+					dataset.data.push(randomScalingFactor());
+				});
+
+				window.myLine.update();
+			}
+		});
+
+		document.getElementById('removeDataset').addEventListener('click', function() {
+			config.data.datasets.splice(0, 1);
+			window.myLine.update();
+		});
+
+		document.getElementById('removeData').addEventListener('click', function() {
+			config.data.labels.splice(-1, 1); // remove the label first
+
+			config.data.datasets.forEach(function(dataset) {
+				dataset.data.pop();
+			});
+
+			window.myLine.update();
+		});
+	</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>

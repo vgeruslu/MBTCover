@@ -1,0 +1,162 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Code Coverage</title>
+    <script src="/js/Chart.min.js"></script>
+    <script src="/js/utils.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/theme.css}"/>
+    <script type="text/javascript" th:src="@{/js/lineChartServerCoverage.js}"></script>
+    <style>
+	canvas{
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+</head>
+
+<body onload='draw();'>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container"> <button class="navbar-toggler navbar-toggler-right border-0 p-0" type="button" data-toggle="collapse" data-target="#navbar14">
+        <p class="navbar-brand mb-0 text-white">
+            <i class="fa d-inline fa-lg fa-stop-circle"></i> BRAND </p>
+    </button>
+        <div class="collapse navbar-collapse" id="navbar14">
+            <p class="navbar-nav mr-auto d-none d-md-block lead mb-0 text-white"> <i class="fa d-inline fa-lg fa-stop-circle"></i><b>&nbsp;<a href="/requirements">Requirements</a></b></p>
+            <p class="navbar-nav mr-auto d-none d-md-block lead mb-0 text-white"> <i class="fa d-inline fa-lg fa-stop-circle"></i><b>&nbsp;<a href="/">Client Coverage</a></b></p>
+            <p class="navbar-nav mr-auto d-none d-md-block lead mb-0 text-white"> <i class="fa d-inline fa-lg fa-stop-circle"></i><b>&nbsp;<a href="/serverCoverage">Server Coverage</a></b></p>
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="https://testinium.com/" target="_blank">
+                    <img src="/images/testinium-web.svg" alt>
+                </a>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="py-4 text-center" style="">
+    <div>
+        <div>
+            <div class="text-center">
+                <h2>Server Code Coverage</h2>
+                <br>
+                <p><span id="display_message"></span></p>
+<div class="py-1 row justify-content-center">
+<a id="startLineChart" class="btn btn-primary" onclick="start(this);" value="stop">Start/Stop Line Chart</a>
+    <script>
+function start(d){
+  $(document).ready(function(){});
+
+   if (document.getElementById("startLineChart").getAttribute('value') !== 'start'){
+
+      addDataset();
+
+      document.getElementById("startLineChart").setAttribute('value', 'start');
+      var timeSecond;
+
+   if(document.getElementById("ServerCoverageTimeTwoSeconds").checked){
+
+         timeSecond = 2;
+   }else if(document.getElementById("ServerCoverageTimeThreeSeconds").checked){
+
+         timeSecond = 3;
+   }else if(document.getElementById("ServerCoverageTimeFourSeconds").checked){
+
+         timeSecond = 4;
+   }else if(document.getElementById("ServerCoverageTimeFiveSeconds").checked){
+
+         timeSecond = 5;
+   }else {
+         timeSecond = 2;
+   }
+
+   console.log(timeSecond);
+   switch (timeSecond) {
+      case 2: readJsonFilee('./js/serverCoverageTime2.json');
+      break;
+
+      case 3: readJsonFilee('./js/serverCoverageTime3.json');
+      break;
+
+      case 4: readJsonFilee('./js/serverCoverageTime4.json');
+      break;
+
+      case 5: readJsonFilee('./js/serverCoverageTime5.json');
+      break;
+
+      default:
+   }
+
+      timeSecond = timeSecond * 1000;
+      console.log(timeSecond);
+     d.interval=setInterval(function(){
+     if(document.getElementById("startLineChart").getAttribute('value') == 'stop'){
+
+       clearInterval(d.interval);
+     }
+       addData();
+
+       }, timeSecond);
+
+
+    } else {
+        clearInterval(d.interval);
+        readJsonFilee('./js/serverCoverageTimeStop.json');
+        document.getElementById("startLineChart").setAttribute('value', 'stop');
+    }
+}
+</script>
+    <br>
+</div>
+                <br>
+                <div>
+                    <input type="radio" id="ServerCoverageTimeTwoSeconds" name="ServerCoverageTime" value="2" checked>
+                    <label for="ServerCoverageTimeTwoSeconds">2 seconds</label>
+                    <input type="radio" id="ServerCoverageTimeThreeSeconds" name="ServerCoverageTime" value="3">
+                    <label for="ServerCoverageTimeThreeSeconds">3 seconds</label>
+                    <input type="radio" id="ServerCoverageTimeFourSeconds" name="ServerCoverageTime" value="4">
+                    <label for="ServerCoverageTimeFourSeconds">4 seconds</label>
+                    <input type="radio" id="ServerCoverageTimeFiveSeconds" name="ServerCoverageTime" value="5">
+                    <label for="ServerCoverageTimeFiveSeconds">5 seconds</label>
+                </div>
+                <br>
+                <a id="clearDataSet" class="btn btn-primary" onclick="clearData();" value="stop">Clear Data</a>
+                <script>
+function clearData(){
+  $(document).ready(function(){});
+
+   if(document.getElementById("startLineChart").getAttribute('value') == 'stop'){
+
+       //document.getElementById("startLineChart").setAttribute('value', 'stop');
+       removeAllData();
+       removeDataset();
+       }
+
+}
+</script>
+                <br>
+                <br>
+<div style="margin-left:auto;margin-right:auto;text-align: center;width:75%;">
+    <canvas id="canvas"></canvas>
+</div>
+
+                <br>
+                <br>
+                <!--<button id="randomizeData" onclick="randomizeDataa();">Randomize Data</button>
+                <button id="addDataset" onclick="addDataset();">Add Dataset</button>
+                <button id="removeDataset" onclick="removeDatasett();">Remove Dataset</button>
+                <button id="addData" onclick="addDatasetAndData();">Add Data</button>
+                <button id="removeData" onclick="removeDataa();">Remove Data</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
