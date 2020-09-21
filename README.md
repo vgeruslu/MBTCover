@@ -13,12 +13,13 @@ May 2020
 * [James Sloan](https://www.linkedin.com/in/james-sloan-3b39a2150/), Software Engineer, Global Payments Integrated Corporation
 
 ## Demo videos
-### A demo video of the second version of the tool, showing coverage values live (September 2020):
+### September 2020: A demo video of the second version of the tool, showing coverage values live
+In this video, we demonstrate a live execution of the MBTCover tool, while the MBT test execution is running using the GraphWalker MBT tool. The System Under Test (SUT) is a large test-automation management tool named [Testinium](http://testinium.com).
 
 <a href="https://youtu.be/S9dVMUIuxgw" target="_blank"><img src="http://img.youtube.com/vi/S9dVMUIuxgw/0.jpg" 
  width="240" height="180" border="10" /></a>
 
-### An overview of the features and code-base of the first version of the tool (May 2020):
+### May 2020: An overview of the features and code-base of the first version of the tool
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=zT3zq-WhgAQ" target="_blank"><img src="http://img.youtube.com/vi/zT3zq-WhgAQ/0.jpg" 
  width="240" height="180" border="10" /></a>
